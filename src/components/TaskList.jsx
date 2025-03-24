@@ -91,7 +91,7 @@ const TaskList = () => {
                             draggable
                             pauseOnHover
                             theme="colored"
-                            transition={Bounce} />
+                           />
         </div>
     );
 };
