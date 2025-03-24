@@ -81,7 +81,17 @@ const TaskList = () => {
                     <li className="list-group-item text-center">No tasks available</li>
                 )}
             </ul>
-            <ToastContainer />
+             <ToastContainer position="top-right"
+                            autoClose={10000}
+                            hideProgressBar={false}
+                            newestOnTop
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                            theme="colored"
+                            transition={Bounce} />
         </div>
     );
 };

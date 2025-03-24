@@ -7,9 +7,9 @@ const TaskItem = ({ task, toggleComplete, deleteTask, editTask }) => {
     const [editedTitle, setEditedTitle] = useState(task.title);
     const [editedDueTime, setEditedDueTime] = useState(task.dueTime);
 
-   const handleToggle = () => {
-    toggleComplete(task); // ✅ Pass the entire task
-};
+    const handleToggle = () => {
+        toggleComplete(task); // ✅ Pass the entire task
+    };
 
 
     const handleSave = () => {
@@ -37,7 +37,17 @@ const TaskItem = ({ task, toggleComplete, deleteTask, editTask }) => {
                 {!isEditing && <button className="btn btn-warning btn-sm me-2" onClick={() => setIsEditing(true)}>Edit</button>}
                 <button className="btn btn-danger btn-sm" onClick={() => deleteTask(task.id)}>Delete</button>
             </div>
-            <ToastContainer />
+            <ToastContainer position="top-right"
+                autoClose={10000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition={Bounce} />
         </li>
     );
 };
