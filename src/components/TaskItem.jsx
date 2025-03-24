@@ -47,7 +47,7 @@ const TaskItem = ({ task, toggleComplete, deleteTask, editTask }) => {
                 draggable
                 pauseOnHover
                 theme="colored"
-                transition={Bounce} />
+                />
         </li>
     );
 };
